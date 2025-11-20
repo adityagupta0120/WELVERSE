@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sell Stocks - Welverse</title>
+    <link rel="stylesheet" href="home.css" />
+</head>
+<body>
+    <header>
+        <h1>Sell Stocks</h1>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="buy.html">Buy</a>
+            <a href="sell.html">Sell</a>
+            <a href="about.html">About</a>
+            <a href="support.html">Support</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Sell Your Stock</h2>
+        <form>
+            <label for="stock">Stock Name:</label><br />
+            <input type="text" id="stock" name="stock" required /><br /><br />
+
+            <label for="price">Price per Share (₹):</label><br />
+            <input type="number" id="price" name="price" required /><br /><br />
+
+            <label for="qty">Quantity:</label><br />
+            <input type="number" id="qty" name="qty" required /><br /><br />
+
+            <input type="submit" value="Submit" disabled />
+        </form>
+        <p><em>Note: This is a demo; form submission needs backend to function.</em></p>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Welverse Finance</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welverse – Pricing</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="pricing.css">
+  <!-- <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #070b15;
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+    a:hover,
+    a:focus {
+      color: #22c55e;
+      outline: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #040a1a;
+      border-bottom: 1px solid #1b223b;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      color: #cbd5f5;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #2563eb, #22c55e);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.15rem;
+      color: #fff;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    nav a {
+      color: #cbd5f5;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Container */
+    .pricing-container {
+      max-width: 1200px;
+      margin: 80px auto 120px auto;
+      padding: 0 6%;
+      text-align: center;
+    }
+
+    /* Heading */
+    .pricing-header {
+      font-size: 3.3rem;
+      font-weight: 700;
+      color: #60a5fa;
+      margin-bottom: 60px;
+      letter-spacing: 0.1em;
+    }
+
+    /* Pricing cards grid - horizontal line */
+    .pricing-grid {
+      display: flex;
+      justify-content: center;
+      gap: 50px;
+      flex-wrap: nowrap;
+    }
+
+    /* Wrap on smaller screens */
+    @media(max-width: 950px) {
+      .pricing-grid {
+        flex-wrap: wrap;
+        gap: 36px;
+      }
+    }
+
+    /* Individual pricing card */
+    .pricing-card {
+      flex: 1 1 320px;
+      background-color: #12172c;
+      border-radius: 20px;
+      padding: 40px 36px 44px 36px;
+      border: 1px solid #263366;
+      box-shadow: 0 8px 26px rgba(15, 23, 42, 0.52);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 360px;
+      min-width: 280px;
+    }
+
+    .pricing-card:hover {
+      border-color: #4f46e5;
+      box-shadow: 0 12px 36px rgba(79, 70, 229, 0.75);
+    }
+
+    /* Highlighted (featured) plan */
+    .featured {
+      border-color: #22c55e;
+      box-shadow: 0 14px 40px rgba(34, 197, 94, 0.8);
+      transform: scale(1.07);
+    }
+
+    /* Plan name */
+    .plan-name {
+      font-size: 1.75rem;
+      font-weight: 700;
+      color: #a9c7ff;
+      margin-bottom: 24px;
+    }
+
+    /* Price */
+    .plan-price {
+      font-size: 3.1rem;
+      font-weight: 900;
+      margin-bottom: 16px;
+      color: #22c55e;
+      letter-spacing: 0.05em;
+    }
+
+    .plan-duration {
+      color: #7499c9;
+      font-size: 1.15rem;
+      margin-bottom: 36px;
+    }
+
+    /* Feature points */
+    .features-list {
+      text-align: left;
+      color: #b6c0e6;
+      font-size: 1.1rem;
+      margin-bottom: 42px;
+      padding-left: 22px;
+    }
+
+    .features-list li {
+      margin: 14px 0;
+      line-height: 1.5;
+      position: relative;
+    }
+    .features-list li::before {
+      content: '✔';
+      position: absolute;
+      left: -30px;
+      color: #22c55e;
+      font-weight: 700;
+      font-size: 1.25rem;
+      line-height: 1;
+      top: 7px;
+    }
+
+    /* Button */
+    .btn-select {
+      padding: 16px 0;
+      background: linear-gradient(135deg, #4f46e5, #22c55e);
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.18rem;
+      border: none;
+      border-radius: 32px;
+      cursor: pointer;
+      width: 100%;
+      transition: filter 0.2s ease;
+      user-select: none;
+      text-transform: uppercase;
+      box-shadow: 0 4px 15px rgba(34,197,94,0.66);
+    }
+
+    .btn-select:hover,
+    .btn-select:focus {
+      filter: brightness(1.15);
+      outline: none;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #020617;
+      color: #8b9ecb;
+      font-size: 1rem;
+      text-align: center;
+      padding: 36px 6% 34px 6%;
+      border-top: 1px solid #232945;
+      letter-spacing: 0.5px;
+      margin-top: 60px;
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        padding: 20px 4%;
+      }
+      .pricing-container {
+        padding: 0 5%;
+      }
+      .pricing-header {
+        font-size: 2.6rem;
+        margin-bottom: 48px;
+      }
+      .plan-price {
+        font-size: 2.4rem;
+      }
+      .plan-name {
+        font-size: 1.45rem;
+      }
+    }
+  </style> -->
+</head>
+<body>
+
+<!-- Navbar -->
+<header class="navbar">
+  <div class="logo">
+    <span class="logo-icon">W</span>
+    <span>Welverse</span>
+  </div>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Learn</a>
+    <a href="#">Products</a>
+    <a href="#">Support</a>
+    <a href="#">Log in</a>
+  </nav>
+</header>
+
+<!-- Pricing Section -->
+<main class="pricing-container">
+  <h1 class="pricing-header">Choose Your Plan</h1>
+
+  <div class="pricing-grid">
+
+    <!-- Basic Plan -->
+    <div class="pricing-card">
+      <div class="plan-name">Basic</div>
+      <div class="plan-price">₹0</div>
+      <div class="plan-duration">Per Month</div>
+      <ul class="features-list">
+        <li>Access to Stocks & Mutual Funds</li>
+        <li>Real-time Market Data</li>
+        <li>Basic Research Reports</li>
+        <li>Email Support</li>
+      </ul>
+      <a href="login.html"><button class="btn-select">Start Free</button></a>
+    </div>
+
+    <!-- Pro Plan -->
+    <div class="pricing-card featured">
+      <div class="plan-name">Pro</div>
+      <div class="plan-price">₹999</div>
+      <div class="plan-duration">Per Month</div>
+      <ul class="features-list">
+        <li>All Basic Features</li>
+        <li>Futures & Options Trading</li>
+        <li>Advanced Charting Tools</li>
+        <li>Priority Email & Chat Support</li>
+      </ul>
+      <button class="btn-select">Get Pro</button>
+    </div>
+
+    <!-- Premium Plan -->
+    <div class="pricing-card">
+      <div class="plan-name">Premium</div>
+      <div class="plan-price">₹2999</div>
+      <div class="plan-duration">Per Month</div>
+      <ul class="features-list">
+        <li>All Pro Features</li>
+        <li>Dedicated Account Manager</li>
+        <li>Exclusive Market Insights</li>
+        <li>24/7 Phone Support</li>
+      </ul>
+      <button class="btn-select">Go Premium</button>
+    </div>
+  </div>
+</main>
+
+<!-- Footer -->
+<footer class="footer">
+  &copy; 2025 Welverse. All rights reserved.
+</footer>
+
+</body>
+</html>

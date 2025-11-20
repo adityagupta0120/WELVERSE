@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>welverse – Products</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="products.css">
+  <!-- <style>
+    /* Reset and font */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background-color: #070b15;
+      color: #fff;
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    a {
+      color: #60a5fa;
+      text-decoration: none;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #040a1a;
+      border-bottom: 1px solid #1b223b;
+      padding: 20px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: bold;
+      font-size: 1.25rem;
+      letter-spacing: 1px;
+    }
+
+    .logo-icon {
+      width: 28px;
+      height: 28px;
+      border-radius: 7px;
+      background: linear-gradient(135deg, #2563eb, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+    }
+
+    nav {
+      display: flex;
+      gap: 1.8rem;
+    }
+
+    nav a {
+      color: #cbd5f5;
+      font-size: 1.05rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    /* Page Header */
+    .page-header {
+      text-align: center;
+      padding: 48px 20px 32px 20px;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #60a5fa;
+      letter-spacing: 1.1px;
+    }
+
+    /* Products Container */
+    .products-container {
+      max-width: 1100px;
+      margin: auto;
+      padding: 0 6%;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 30px;
+      padding-bottom: 50px;
+    }
+
+    /* Individual Product Card */
+    .product-card {
+      background-color: #12172c;
+      border-radius: 16px;
+      border: 1px solid #263366;
+      padding: 25px 30px 30px 30px;
+      box-shadow: 0 6px 22px rgba(15, 23, 42, 0.57);
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    .product-card:hover {
+      border-color: #4f46e5;
+      box-shadow: 0 8px 30px rgba(79, 70, 229, 0.65);
+    }
+
+    .product-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 14px;
+      color: #a9c7ff;
+    }
+
+    .product-description {
+      font-size: 1rem;
+      color: #d0d9fb;
+      line-height: 1.5;
+      flex-grow: 1;
+      margin-bottom: 20px;
+    }
+
+    /* Button Styles */
+    .invest-btn {
+      padding: 10px 18px;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: 25px;
+      border: none;
+      background: linear-gradient(135deg, #4f46e5, #22c55e);
+      color: #fff;
+      cursor: pointer;
+      align-self: start;
+      transition: filter 0.2s ease;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      user-select: none;
+    }
+
+    .invest-btn:hover, .invest-btn:focus {
+      filter: brightness(1.1);
+      outline: none;
+    }
+
+    /* Footer */
+    .footer {
+      background-color: #020617;
+      color: #8b9ecb;
+      font-size: 1rem;
+      text-align: center;
+      padding: 28px 8% 26px 8%;
+      border-top: 1px solid #232945;
+      letter-spacing: 0.5px;
+    }
+
+    @media (max-width: 650px) {
+      .navbar {
+        padding: 20px 4%;
+      }
+    }
+  </style> -->
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <span class="logo-icon">W</span>
+      <span>welverse</span>
+    </div>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Learn</a>
+      <a href="#">Products</a>
+      <a href="#">Support</a>
+      <a href="#">Log in</a>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <h1 class="page-header">Trading Products Offered</h1>
+
+  <!-- Products Grid -->
+  <div class="products-container">
+
+    <div class="product-card">
+      <h2 class="product-title">Mutual Funds</h2>
+      <p class="product-description">
+        Mutual funds pool money from multiple investors to invest in stocks, bonds, or other assets. Managed by professionals, they provide diversification and are a popular investment choice for long-term wealth growth.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">Stocks</h2>
+      <p class="product-description">
+        Stocks represent ownership shares in companies. Buying stocks lets you participate in a company’s growth and earnings. Stocks can provide both capital appreciation and dividends, but involve market risk.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">Futures & Options</h2>
+      <p class="product-description">
+        Futures and options are derivatives giving the right or obligation to buy/sell assets at a future date. They are used for hedging risks or speculation and require knowledge of complex strategies due to their leverage.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">Commodities</h2>
+      <p class="product-description">
+        Commodities include physical goods like gold, oil, and agricultural products. You can trade commodity futures to diversify your portfolio and benefit from price movements in raw materials.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">IPOs</h2>
+      <p class="product-description">
+        IPOs (Initial Public Offerings) are when companies offer shares to the public for the first time. Investing in IPOs allows you to participate early but carries risk as companies are newly public.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">Currencies</h2>
+      <p class="product-description">
+        Currency trading (Forex) involves exchanging one currency for another. It's popular for speculation and hedging but requires understanding global economic factors and market volatility.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">Gold</h2>
+      <p class="product-description">
+        Gold is a precious metal traded as a safe-haven asset. It can be invested in physical form or through gold ETFs and futures, providing protection against inflation and market instability.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+    <div class="product-card">
+      <h2 class="product-title">Fixed Income</h2>
+      <p class="product-description">
+        Fixed income securities include bonds and debentures that pay regular interest. These investments offer stable income and lower risk compared to equities, suitable for risk-averse investors.
+      </p>
+      <a href="#" class="invest-btn">Start Investing Now</a>
+    </div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    &copy; 2025 wellearn. All rights reserved.
+  </footer>
+</body>
+</html>

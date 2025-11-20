@@ -1,0 +1,1140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Welverse – Trade Smarter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="main.css">
+
+  <!-- <style>
+    /* Basic reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background-color: #070b15;
+      color: #ffffff;
+      line-height: 1.5;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(4, 10, 26, 0.95);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      padding: 0.75rem 5%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-weight: 700;
+      font-size: 1.2rem;
+      letter-spacing: 0.03em;
+    }
+
+    .logo-icon {
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, #2563eb, #22c55e);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 1.5rem;
+      font-size: 0.95rem;
+      color: #cbd5f5;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav-actions {
+      display: flex;
+      gap: 0.75rem;
+    }
+
+    .btn {
+      padding: 0.45rem 0.95rem;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      background: transparent;
+      color: #e5e7eb;
+    }
+
+    .btn-outline {
+      border-color: #4f46e5;
+      color: #e5e7eb;
+    }
+
+    .btn-outline:hover {
+      background: rgba(79, 70, 229, 0.1);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, #4f46e5, #22c55e);
+      color: #ffffff;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      opacity: 0.95;
+    }
+
+    /* Hero section */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr);
+      gap: 3rem;
+      padding: 3.5rem 5% 3rem;
+      align-items: center;
+    }
+
+    .hero-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.2rem 0.7rem;
+      border-radius: 999px;
+      font-size: 0.75rem;
+      background: rgba(34, 197, 94, 0.1);
+      color: #bbf7d0;
+      border: 1px solid rgba(34, 197, 94, 0.4);
+      margin-bottom: 0.75rem;
+    }
+    .hero-title {
+      font-size: clamp(2rem, 3vw, 2.8rem);
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-title span {
+      color: #60a5fa;
+    }
+
+    .hero-subtitle {
+      font-size: 0.95rem;
+      color: #9ca3af;
+      max-width: 460px;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    .hero-note {
+      font-size: 0.8rem;
+      color: #6b7280;
+    }
+
+    .hero-metrics {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.75rem;
+      font-size: 0.8rem;
+    }
+
+    .metric {
+      display: flex;
+      flex-direction: column;
+      gap: 0.1rem;
+    }
+
+    .metric-value {
+      font-size: 1.1rem;
+      font-weight: 600;
+    }
+
+    .metric-label {
+      color: #6b7280;
+    }
+
+    /* Hero right: fake dashboard */
+    .hero-card {
+      background: #020617;
+      border-radius: 20px;
+      padding: 1.25rem 1.1rem;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      box-shadow: 0 20px 60px rgba(15, 23, 42, 0.85);
+      transition: 0.9s;
+    }
+    .hero-card:hover{
+        transform: scale(1.05);
+        border-color: silver;
+        box-shadow: silver 0px 0px 10px;
+    }
+
+    .hero-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.9rem;
+      font-size: 0.8rem;
+    }
+
+    .hero-card-title {
+      font-weight: 600;
+    }
+
+    .hero-card-tabs {
+      display: flex;
+      gap: 0.4rem;
+    }
+
+    .hero-card-tab {
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid transparent;
+      font-size: 0.7rem;
+      cursor: pointer;
+      color: #9ca3af;
+    }
+
+    .hero-card-tab.active {
+      border-color: #4f46e5;
+      color: #e5e7eb;
+      background: rgba(79, 70, 229, 0.2);
+    }
+
+    .hero-card-body {
+      background: rgba(15, 23, 42, 0.9);
+      border-radius: 14px;
+      padding: 0.9rem;
+    }
+
+    .watchlist-header {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.7rem;
+      color: #6b7280;
+      margin-bottom: 0.4rem;
+    }
+
+    .watchlist-row {
+      display: grid;
+      grid-template-columns: 1.7fr 1fr 1fr;
+      font-size: 0.8rem;
+      padding: 0.45rem 0;
+      border-bottom: 1px solid rgba(31, 41, 55, 0.8);
+    }
+
+    .watchlist-row:last-child {
+      border-bottom: none;
+    }
+
+    .chip {
+      font-size: 0.65rem;
+      padding: 0.1rem 0.4rem;
+      border-radius: 999px;
+      background: rgba(15, 23, 42, 0.9);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      margin-left: 0.3rem;
+      color: #cbd5f5;
+    }
+
+    .price-green {
+      color: #4ade80;
+    }
+
+    .price-red {
+      color: #f97373;
+    }
+
+    /* Features section */
+    .features {
+      padding: 2.5rem 5% 3rem;
+      background: #020617;
+      border-top: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .section-heading {
+      font-size: 1.4rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+    }
+
+    .section-subtitle {
+      font-size: 0.9rem;
+      color: #9ca3af;
+      max-width: 520px;
+      margin-bottom: 1.8rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 1.4rem;
+    }
+
+    .feature-card {
+      background: #020617;
+      border-radius: 16px;
+      border: 1px solid rgba(148, 163, 184, 0.25);
+      padding: 1rem;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+    
+    .feature-card:hover{
+        border-color: silver;
+        translate: 0 -5px;
+        box-shadow: silver 0px 0px 10px;
+    }
+
+    .feature-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: rgba(37, 99, 235, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      color: #60a5fa;
+    }
+
+    .feature-title {
+      font-weight: 600;
+      margin-bottom: 0.3rem;
+    }
+
+    .feature-text {
+      color: #9ca3af;
+      font-size: 0.82rem;
+    }
+
+    /* Footer */
+    .footer {
+      padding: 1.5rem 5% 2rem;
+      font-size: 0.75rem;
+      color: #6b7280;
+      background: #020617;
+      border-top: 1px solid rgba(15, 23, 42, 1);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 1.2rem;
+    }
+
+    /* Responsive */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 720px) {
+      .nav-links {
+        display: none;
+      }
+      .feature-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero {
+        padding: 2.4rem 1.2rem 2.3rem;
+      }
+      .features,
+      .footer {
+        padding-left: 1.2rem;
+        padding-right: 1.2rem;
+      }
+    }
+
+    /* HERO SECTION */
+.hero1 {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero1 h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero1 p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 25px;
+}
+
+.primary-btn {
+    padding: 10px 24px;
+    background: #5B2EFF;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+/* CARD GRID */
+.cardsbaap {
+    justify-content: center;
+    margin: auto;
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    gap: 35px;
+    
+}
+
+
+.card1 {
+    background: white;
+    color: #020617;
+    text-align: center;
+    background-image: none;
+    padding: 35px;
+    
+    border-radius: 14px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    cursor: pointer;
+    transition: 0.3s ease;
+    height: 150px;
+    width: 150px;
+}
+
+.card1:hover {
+    transform: translateY(-5px);
+}
+
+.card1 img {
+    width: 90px;
+    margin-bottom: 15px;
+}
+
+.card1 h3 {
+    font-size: 18px;
+}
+
+/* PRICING SECTION */
+.pricing {
+    text-align: center;
+    padding: 70px 20px;
+    background: #070b15;
+    margin-top: 40px;
+}
+
+.pricing h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+
+.demat-steps-section {
+    background: #070b15;
+    padding: 80px 20px;
+    text-align: center;
+    color: white;
+}
+
+.demat-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.demat-steps-container {
+    max-width: 1100px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+}
+
+.demat-step-box {
+    flex: 1;
+    min-width: 220px;
+    padding: 10px;
+}
+
+.demat-step-icon {
+    width: 70px;
+    margin-bottom: 15px;
+}
+
+.demat-step-heading {
+    margin-bottom: 10px;
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.demat-step-text {
+    font-size: 15px;
+    color: #cccccc;
+}
+
+.demat-footer-note {
+    color: #bbbbbb;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+.documents {
+    padding: 70px 6%;
+    background: #070b15;  /* SAME AS PREVIOUS SECTIONS */
+}
+
+.documents-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.documents-header h2 {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.primary-btn {
+    background: #5b2ca0;
+    color: #fff;
+    padding: 14px 35px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: 0.2s ease;
+}
+
+.primary-btn:hover {
+    opacity: 0.9;
+}
+
+.document-boxes {
+    
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.doc-card {
+    width: 30%;
+    background: #020617;
+    border-radius: 20px;
+    padding: 40px 25px;
+    text-align: left;
+    box-shadow: 0 0 20px rgba(0,0,0,0.05);
+}
+
+.doc-card img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.doc-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.doc-card p {
+    color: #555;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+
+
+/* WELVERSE FOOTER DISCLAIMER SECTION */
+.welverse-disclaimer {
+    background: #070b15; /* matches your site's main theme */
+    color: #e4e4e4;
+    padding: 60px 10%;
+    font-size: 14px;
+    line-height: 1.6;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+.wd-container {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.welverse-disclaimer h4 {
+    color: #9AB4FF; /* subtle purple-blue for headings */
+    margin-bottom: 6px;
+    margin-top: 10px;
+}
+
+.welverse-disclaimer a {
+    color: #7DA7FF;
+    text-decoration: underline;
+}
+
+.welverse-disclaimer a:hover {
+    color: #ffffff;
+}
+
+.welverse-disclaimer p {
+    margin-bottom: 10px;
+    color: #cfcfcf;
+}
+
+@media (max-width: 768px) {
+    .welverse-disclaimer {
+        padding: 50px 20px;
+    }
+}
+
+.testimonials {
+    padding: 60px 5%;
+    background-color: #070b15;
+    text-align: center;
+}
+
+
+.testimonials h2 {
+    font-size: 38px;
+    font-weight: 700;
+    margin-bottom: 40px;
+}
+
+.testimonials h2 span {
+    color: #a478ff;
+    margin-right: 10px;
+}
+
+.testimonial-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    position: relative;
+}
+
+.nav-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: white;
+    border: 2px solid #b08cff;
+    color: #5a3fd8;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.nav-btn:hover {
+    background: #b08cff;
+    color: white;
+}
+
+.testimonial-container {
+    display: flex;
+    gap: 25px;
+    overflow: hidden;
+    width: 80%;
+}
+
+.testimonial-card {
+    background: #283ad8;
+    min-width: 350px;
+    max-width: 350px;
+    padding: 25px;
+    border-radius: 18px;
+    text-align: left;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+    transition: 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote {
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: -5px;
+    margin-right: 100px;
+}
+
+.testimonial-card p {
+    color: white;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.testimonial-card h4 {
+    font-weight: 700;
+    color: white;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+    .testimonial-container {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .testimonial-card {
+        min-width: 100%;
+    }
+
+    .nav-btn {
+        display: none;
+    }
+}
+
+</style> -->
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <div class="logo-icon">W</div>
+      <span>Welverse</span>
+    </div>
+    <nav class="nav-links">
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="resouces.html">Resources</a>
+      <a href="wellearn.html">Wellearn</a>
+      <a href="support.html">Support</a>
+      <a target="_blank" href="WELGRAM.HTML">Welgram</a>
+      <a href="about.html">About</a>
+    </nav>
+    <div class="nav-actions">
+      <a href="login.html"><button class="btn btn-outline">Log in</button></a>
+      <a href="signup.html"><button class="btn btn-primary">Open account</button></a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <main>
+    <section class="hero">
+      <div>
+        <div class="hero-tag">
+          <span>NEW</span>
+          <span>Welverse trading platform</span>
+        </div>
+        <h1 class="hero-title">
+          Trade and invest with<br />
+          <span>clarity and control.</span>
+        </h1>
+        <p class="hero-subtitle">
+          Welverse helps you invest in stocks, mutual funds, and more with a fast, intuitive platform built for both beginners and pros.
+        </p>
+        <div class="hero-actions">
+          <a href="signup.html"><button class="btn btn-primary">Get started for free</button></a>
+          <a href="pricing.html"><button class="btn btn-outline">View pricing</button></a>
+        </div>
+        <p class="hero-note">
+          Zero paperwork. Quick online account opening. Brokerage as low as ₹0 on investing.
+        </p>
+
+        <div class="hero-metrics">
+          <div class="metric">
+            <span class="metric-value">1.2 Cr+</span>
+            <span class="metric-label">Investors on Welverse</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">₹0</span>
+            <span class="metric-label">Commission on delivery trades</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">24x7</span>
+            <span class="metric-label">Secure order handling</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card">
+        <div class="hero-card-header">
+          <div>
+            <div class="hero-card-title">Watchlist • Welverse</div>
+            <div style="font-size: 0.7rem; color:#6b7280;">Live market snapshot</div>
+          </div>
+          <div class="hero-card-tabs">
+            <button class="hero-card-tab active">Overview</button>
+            <button class="hero-card-tab">Positions</button>
+            <button class="hero-card-tab">Orders</button>
+          </div>
+        </div>
+
+        <div class="hero-card-body">
+          <div class="watchlist-header">
+            <span>Scrip</span>
+            <span>LTP</span>
+            <span>Change</span>
+          </div>
+
+          <div class="watchlist-row">
+            <div>
+              NIFTY 50
+              <span class="chip">Index</span>
+            </div>
+            <div class="price-green">22,415.35</div>
+            <div class="price-green">+0.85%</div>
+          </div>
+
+          <div class="watchlist-row">
+            <div>
+              WELV&nbsp;BANK
+              <span class="chip">F&O</span>
+            </div>
+            <div class="price-red">47,920.10</div>
+            <div class="price-red">−0.42%</div>
+          </div>
+
+          <div class="watchlist-row">
+            <div>
+              WELV&nbsp;TECH
+              <span class="chip">EQ</span>
+            </div>
+            <div class="price-green">1,842.75</div>
+            <div class="price-green">+1.26%</div>
+          </div>
+
+          <div class="watchlist-row">
+            <div>
+              WELV&nbsp;NIFTY&nbsp;ETF
+              <span class="chip">ETF</span>
+            </div>
+            <div class="price-green">212.40</div>
+            <div class="price-green">+0.41%</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+      <h2 class="section-heading">Why trade with Welverse?</h2>
+      <p class="section-subtitle">
+        Designed for speed, reliability, and clarity so you stay focused on your strategy, not the interface.
+      </p>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <div class="feature-title">Fast, intuitive platform</div>
+          <p class="feature-text">
+            Clean layouts, smart search, and powerful charting tools help you execute trades in just a few clicks.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <div class="feature-title">Secure by default</div>
+          <p class="feature-text">
+            Bank-grade encryption, two-factor authentication, and real-time risk checks keep your account protected.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <div class="feature-title">All in one place</div>
+          <p class="feature-text">
+            Track stocks, mutual funds, and indices from a single, unified dashboard built for multi-device use.
+          </p>
+        </div>
+      </div>
+    </section>
+
+     <!-- HERO SECTION -->
+    <section class="hero1">
+        <h2>One Platform. Multiple Choices.</h2>
+        <p>We've got something for everyone</p>
+        <a href="login.html"><button class="primary-btn">Start Investing</button></a>
+    </section>
+
+    <!-- CARD GRID -->
+    <section class="cardsbaap">
+        <div style="background-image: url(Funds.png);" class="card1" id="mutualfund">
+            <img class="img-logo" src="Funds.png"  alt="">
+            <h3>Mutual Funds</h3>
+        </div>
+
+        <div class="card1">
+            <img class="img-logo"  src="Stock Buy Order.png" alt="">
+            <h3>Stocks</h3>
+        </div>
+
+        <div class="card1">
+            <img class="img-logo"  src="icons8-future-64.png" alt="">
+            <h3 style="font-size: small;">Futures & Options</h3>
+        </div>
+
+        <div class="card1">
+            <div>
+                <img class="img-logo"  src="icons8-new-product-64 (2).png" alt="">
+                <h3>Commodities</h3>
+            </div>
+            
+        </div>
+
+        <div class="card1">
+            <img class="img-logo"  src="icons8-ipo-64.png" alt="">
+            <h3>IPOs</h3>
+        </div>
+
+        <div class="card1">
+            <img class="img-logo"  src="icons8-currencies-64.png" alt="">
+            <h3>Currencies</h3>
+        </div>
+
+        <div class="card1">
+            <img class="img-logo"  src="icons8-gold-40.png" alt="">
+            <h3>Gold</h3>
+        </div>
+
+        <div class="card1">
+            <img  class="img-logo" src="icons8-house-64 (1).png" alt="">
+            <h3>Fixed Income</h3>
+        </div>
+    </section>
+    <br>
+    <br>
+
+    <pre style="text-align: center;">           Mutual Funds    Stocks     Future & Option     Comodities     IPOs   Currencies     Gold    Fixed Income</pre>
+  </main>
+  <!--fottor -->
+  <section class="demat-steps-section">
+    <h2 class="demat-title">How to Open a Demat Account?</h2>
+
+    <div class="demat-steps-container">
+
+        <!-- Step 1 -->
+        <div class="demat-step-box">
+            <img src="icons8-download-94.png" class="demat-step-icon">
+            <h3 class="demat-step-heading">STEP 1</h3>
+            <p class="demat-step-text">Download the Upstox app or visit the Upstox website</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="demat-step-box">
+            <img src="icons8-smartphone-94.png" class="demat-step-icon">
+            <h3 class="demat-step-heading">STEP 2</h3>
+            <p class="demat-step-text">Enter your mobile number and verify with OTP</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="demat-step-box">
+            <img src="icons8-verify-48.png" class="demat-step-icon">
+            <h3 class="demat-step-heading">STEP 3</h3>
+            <p class="demat-step-text">Verify KYC & bank details</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="demat-step-box">
+            <img src="icons8-sign-48.png" class="demat-step-icon">
+            <h3 class="demat-step-heading">STEP 4</h3>
+            <p class="demat-step-text">eSign your form and documents</p>
+        </div>
+
+    </div>
+
+    <p class="demat-footer-note">
+        All data is stored safely with encryption as per regulatory guidelines.
+    </p>
+</section>
+
+<section class="documents">
+    <div class="documents-header">
+        <h2>Documents Required<br>To Open A Demate<br>Account</h2>
+        <a href="login.html" class="primary-btn">Start Investing for FREE</a>
+    </div>
+
+    <div class="document-boxes">
+        <div class="doc-card">
+            <img src="icons8-identity-48.png" alt="Identity Proof">
+            <h3>Identity proof</h3>
+            <p>Your PAN is required as identity proof and to fetch your ITR Name</p>
+        </div>
+
+        <div class="doc-card">
+            <img src="icons8-address-100.png" alt="Address Proof">
+            <h3>Address proof</h3>
+            <p>Your Aadhaar required as address proof. Ensure it is linked to a mobile number</p>
+        </div>
+
+        <div class="doc-card">
+            <img src="icons8-income-100.png" alt="Income Proof">
+            <h3>Income proof</h3>
+            <p>Required only if you wish to activate F&O, Commodities segments</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="testimonials">
+    <h2><span>💜</span> Testimonials</h2>
+
+    <div class="testimonial-wrapper">
+
+        <button class="nav-btn left-btn">&#8592;</button>
+
+        <div class="testimonial-container">
+
+            <div class="testimonial-card">
+                <div class="quote">“</div>
+                <p>
+                    The platform upgrade is amazing. Charts, news, and financials are all in one place.
+                    Makes it super easy to navigate everything!
+                </p>
+                <h4>Arun Prasad</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote">“</div>
+                <p>
+                    Excellent experience! Clean UI, very fast, and great for beginners.  
+                    Trading has never been this smooth.
+                </p>
+                <h4>Somnath Das</h4>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="quote">“</div>
+                <p>
+                    It's good to see continuous improvements. My trading journey has become
+                    smoother with each update. Good job team!
+                </p>
+                <h4>Akhil Nair</h4>
+            </div>
+
+
+        </div>
+
+        <button class="nav-btn right-btn">&#8594;</button>
+
+    </div>
+</section>
+
+
+
+    <!-- WELVERSE — LEGAL DISCLAIMER SECTION -->
+<section class="welverse-disclaimer">
+  <div class="wd-container">
+
+    <p><strong>Welverse Securities Pvt. Ltd.</strong> | SEBI Registration No.: INZ000318537 | CIN: U65100DL2021PTC376860 |
+      Compliance Officer: Mr. Kapil Jalkalyani | Tel: (022) 24229290 | 
+      Email: compliance@welverse.com</p>
+
+    <p>Registered Address: 809, New Delhi House, Barakhamba Road, Connaught Place, New Delhi - 110001 |
+      Corporate Office: 30th Floor, Sunshine Tower, BKC, Mumbai - 400013.</p>
+
+    <br>
+
+    <h4>About the Company</h4>
+    <p>Welverse Securities Private Limited is a wholly owned subsidiary of Welverse Financial Holdings.</p>
+
+    <br>
+
+    <h4>SEBI Scores</h4>
+    <p>
+      To file a complaint on SEBI SCORES, visit the SCORES portal. Mandatory details include:
+      Name, PAN, Address, Mobile Number, and Email ID.
+      Please refer to SEBI’s <a href="#">Risk Disclosure Document</a> and our 
+      <a href="#">Terms of Use</a> & <a href="#">Privacy Policy</a>.
+    </p>
+
+    <br>
+
+    <h4>Attention Investors</h4>
+    <p>
+      SEBI has established an 
+      <a href="#">Online Dispute Resolution Portal (ODR Portal)</a> 
+      to streamline disputes in the Indian securities market.
+    </p>
+
+    <br>
+
+    <h4>Collateral</h4>
+    <p>
+      Clearing Corporations provide web-based facilities allowing clients to view their 
+      collateral placed. View links: <a href="#">NCL</a> | <a href="#">ICCL</a>.
+    </p>
+
+    <br>
+
+    <h4>Investment Disclaimer</h4>
+    <p>
+      Investments are subject to market risks. Read all scheme-related documents carefully.
+    </p>
+
+    <p>*Brokerage will not exceed SEBI-prescribed limits. Annual maintenance charges waived for first year.</p>
+
+    <br>
+
+    <h4>Risk disclosures on:</h4>
+    <p>
+      <a href="#">Derivatives</a> | <a href="#">Mutual Funds</a> | <a href="#">IPO</a> | <a href="#">Pledge of Securities</a> | 
+      <a href="#">Unauthorized Trading</a> | <a href="#">Third Party Products</a>
+    </p>
+
+    <br>
+
+    <h4>Important</h4>
+    <p>
+      Welverse does not authorize any individual or organization to trade or solicit funds on behalf of customers.
+      Report suspicious activity at complaints@welverse.com.
+    </p>
+
+    <br>
+
+    <h4>Insurance</h4>
+    <p><strong>Welverse Securities India Pvt. Ltd.</strong> is registered with IRDAI.</p>
+    <p>
+      Email: insurancesupport@welverse.com <br>
+      IRDAI Portal: https://irdai.gov.in/ <br>
+      Insurance Ombudsman: https://cioins.co.in/
+    </p>
+
+  </div>
+</section>
+
+
+
+
+  <!-- Footer -->
+  <footer class="footer" id="footer">
+    <span>© 2025 Welverse Technologies Pvt. Ltd. All rights reserved.</span>
+    <div class="footer-links">
+      <a href="#">Terms</a>
+      <a href="#">Privacy</a>
+      <a href="#">Disclosures</a>
+    </div>
+  </footer>
+</body>
+</html>

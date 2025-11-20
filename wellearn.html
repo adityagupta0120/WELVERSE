@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>wellearn – Learn Trading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wellearn.css">
+    <!-- <style>
+        /* Reset and font */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background: #070b15;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        a {
+            color: #60a5fa;
+            text-decoration: none;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: #040a1a;
+            border-bottom: 1px solid #222;
+            padding: 20px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+        }
+
+        .logo-icon {
+            width: 28px;
+            height: 28px;
+            border-radius: 8px;
+            background: linear-gradient(135deg,#2563eb,#22c55e);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+        }
+
+        .navbar nav {
+            display: flex;
+            gap: 1.8rem;
+        }
+
+        .navbar nav a {
+            color: #cbd5f5;
+            font-size: 1.05rem;
+            transition: color 0.2s;
+        }
+
+        .navbar nav a:hover {
+            color: #fff;
+        }
+
+        /* Main section */
+        .main-section {
+            padding: 3.5rem 10% 2.5rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+            align-items: flex-start;
+            background: #070b15;
+        }
+
+        .page-header {
+            font-size: 2.35rem;
+            font-weight: 700;
+            color: #60a5fa;
+            margin-bottom: 16px;
+            margin-top: 10px;
+        }
+
+        .intro {
+            font-size: 1.22rem;
+            color: #cdd7fa;
+            max-width: 680px;
+            margin-bottom: 30px;
+        }
+
+        .learn-btn {
+            padding: 12px 32px;
+            background: linear-gradient(135deg,#4f46e5,#22c55e);
+            color: #fff;
+            border: none;
+            border-radius: 27px;
+            font-size: 1.18rem;
+            cursor: pointer;
+            font-weight: bold;
+            margin-bottom: 34px;
+            margin-top: 7px;
+            transition: background 0.25s;
+        }
+
+        .learn-btn:hover {
+            filter: brightness(1.1);
+        }
+
+        /* Features section */
+        .features-section {
+            width: 100%;
+            background: #020617;
+            border-radius: 17px;
+            padding: 38px 33px;
+            margin-bottom: 40px;
+            border: 1px solid #2e3a58;
+        }
+
+        .features-title {
+            font-size: 1.35rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #9cc6ff;
+        }
+
+        .features-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 34px;
+            margin-top: 17px;
+        }
+
+        .feature-box {
+            flex: 1 1 240px;
+            background: #12172c;
+            border-radius: 14px;
+            padding: 24px 16px 18px 16px;
+            margin: 0 12px 14px 0;
+            min-width: 220px;
+            border: 1px solid #263366;
+        }
+
+        .feature-head {
+            font-weight: bold;
+            margin-bottom: 13px;
+            color: #4de299;
+            font-size: 1.13rem;
+        }
+
+        .feature-desc {
+            color: #b6c0e6;
+            font-size: 1.05rem;
+        }
+
+        /* Steps section */
+        .steps-section {
+            margin: 42px 0 18px 0;
+        }
+
+        .steps-title {
+            color: #a478ff;
+            font-size: 1.27rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .steps-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 32px;
+            margin-top: 3px;
+        }
+
+        .step {
+            flex: 1 1 230px;
+            padding: 22px;
+            background: #1b2340;
+            border-radius: 13px;
+            min-width: 180px;
+            max-width: 240px;
+            color: #fff;
+            margin-right: 12px;
+            border: 1px solid #354676;
+            text-align: center;
+            margin-bottom: 11px;
+        }
+
+        .step-number {
+            background: #2563eb;
+            color: #fff;
+            font-weight: 600;
+            padding: 6px 18px;
+            border-radius: 22px;
+            margin-bottom: 13px;
+            font-size: 1rem;
+            display: inline-block;
+        }
+
+        .step-desc {
+            color: #b5c8fa;
+            font-size: 1.08rem;
+        }
+
+        /* Resources section */
+        .resources-section {
+            margin-top: 56px;
+            width: 100%;
+            background: #020617;
+            border-radius: 15px;
+            padding: 33px 17px 21px 24px;
+            border: 1px solid #2e3a58;
+            color: #dde2ff;
+        }
+
+        .resources-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: #60a5fa;
+        }
+
+        .resource-list {
+            margin-top: 10px;
+            padding-left: 16px;
+        }
+
+        .resource-list li {
+            margin-bottom: 10px;
+            color: #bed6ff;
+            font-size: 1.09rem;
+        }
+
+        /* Footer */
+        .footer {
+            background: #020617;
+            color: #8b9ecb;
+            padding: 30px 10% 25px;
+            font-size: 1rem;
+            border-top: 1px solid #232945;
+            text-align: center;
+            margin-top: 47px;
+            letter-spacing: 0.5px;
+        }
+
+        @media (max-width: 900px) {
+            .main-section, .footer, .features-section, .resources-section {
+                padding: 14px;
+            }
+            .features-list, .steps-grid {
+                flex-direction: column;
+            }
+            .step, .feature-box {
+                max-width: 100%;
+                min-width: 120px;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">
+            <span class="logo-icon">W</span>
+            <span>wellearn</span>
+        </div>
+        <nav>
+            <a href="#">Home</a>
+            <a href="#">Learn</a>
+            <a href="#">Trading Basics</a>
+            <a href="#">Open Account</a>
+            <a href="#">Support</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="main-section">
+            <h1 class="page-header">
+                Begin Your Trading Journey<br>with wellearn
+            </h1>
+            <p class="intro">
+                Discover the basics of stock market investing, trading accounts, order types, and key market concepts—all crafted for beginners! Our easy guides put you on the path to becoming a confident investor.
+            </p>
+            <button class="learn-btn">Start Learning Now</button>
+
+            <!-- Features Section -->
+            <section class="features-section">
+                <div class="features-title">What You'll Learn</div>
+                <div class="features-list">
+                    <div class="feature-box">
+                        <div class="feature-head">💡 Trading Basics</div>
+                        <div class="feature-desc">
+                            Explore how stocks and mutual funds work. Understand how financial markets operate and core principles for first-time investors.
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-head">🛡️ Safe Investing</div>
+                        <div class="feature-desc">
+                            Learn about opening trading accounts, KYC, and protecting your funds and data using best security practices.
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-head">📈 Order Types</div>
+                        <div class="feature-desc">
+                            Master different order types: market, limit, stop loss. Learn when and how to use each for better trades.
+                        </div>
+                    </div>
+                    <div class="feature-box">
+                        <div class="feature-head">📚 Real Examples</div>
+                        <div class="feature-desc">
+                            Work through demo scenarios, see how trades are placed, and practice decisions risk-free.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Steps Section -->
+            <section class="steps-section">
+                <div class="steps-title">How to Get Started?</div>
+                <div class="steps-grid">
+                    <div class="step">
+                        <div class="step-number">Step 1</div>
+                        <div class="step-desc">
+                            Register on wellearn and verify your identity (KYC).
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">Step 2</div>
+                        <div class="step-desc">
+                            Open a Demat & Trading account; keep shares & investments safe online.
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">Step 3</div>
+                        <div class="step-desc">
+                            Add funds, then explore learning modules—trading basics made simple!
+                        </div>
+                    </div>
+                    <div class="step">
+                        <div class="step-number">Step 4</div>
+                        <div class="step-desc">
+                            Try demo trades and make your first investment confidently.
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Resources Section -->
+            <section class="resources-section">
+                <div class="resources-title">Essential Resources</div>
+                <ul class="resource-list">
+                    <li>Short video introductions to stocks and mutual funds</li>
+                    <li>Step-by-step guides: How to open a trading account</li>
+                    <li>Checklist for required documents (PAN, Aadhaar, Bank Proof)</li>
+                    <li>Frequently asked questions and beginner tips</li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        © 2025 wellearn. For learning purposes. Not investment advice.
+    </footer>
+</body>
+</html>

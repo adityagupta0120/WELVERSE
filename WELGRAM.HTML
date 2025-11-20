@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welgram - Trading Social Network</title>
+    <link rel="stylesheet" href="WELGRAM.css">
+    <!-- <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: #070b15;
+            color: #ffffff;
+            line-height: 1.6;
+        }    /* Header */
+    .header {
+        background: rgba(4, 10, 26, 0.95);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        padding: 12px 0;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+    }
+
+        .header-content {
+            max-width: 975px;
+            margin: 0 auto;
+            padding: 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }    .logo {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 20px;
+        font-weight: 700;
+        color: #ffffff;
+        letter-spacing: 0.03em;
+    }
+
+    .logo-icon {
+        width: 26px;
+        height: 26px;
+        border-radius: 8px;
+        background: linear-gradient(135deg, #2563eb, #22c55e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 14px;
+        color: white;
+    }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 630px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        /* Post Card */    .post {
+        background-color: #020617;
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 16px;
+        margin-bottom: 24px;
+        transition: 0.3s ease;
+    }
+
+    .post:hover {
+        border-color: rgba(148, 163, 184, 0.4);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    }
+
+        .post-header {
+            display: flex;
+            align-items: center;
+            padding: 14px 16px;
+            gap: 12px;
+        }
+
+    .avatar {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #4f46e5, #22c55e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+        .post-info {
+            flex: 1;
+        }
+
+        .username {
+            font-weight: 600;
+            font-size: 14px;
+            color: #ffffff;
+        }
+
+        .timestamp {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .post-content {
+            padding: 0 16px 12px;
+        }
+
+        .post-text {
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 12px;
+        }
+
+        .trade-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+            padding: 16px;
+            color: #ffffff;
+            margin-top: 12px;
+        }
+
+        .trade-card.bullish {
+            background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
+        }
+
+        .trade-card.bearish {
+            background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
+        }
+
+        .trade-symbol {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .trade-details {
+            font-size: 13px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+
+        .trade-price {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 8px 0;
+        }
+
+        .trade-change {
+            display: inline-block;
+            padding: 4px 8px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .post-actions {
+            padding: 8px 16px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .action-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            color: #ffffff;
+            padding: 8px;
+        }
+
+        .action-btn:hover {
+            opacity: 0.6;
+        }
+
+        .post-stats {
+            padding: 0 16px 12px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .hashtags {
+            color: var(--color-primary);
+            font-size: 13px;
+            margin-top: 8px;
+        }
+
+        .hashtags a {
+            color: #4f46e5;
+            text-decoration: none;
+            margin-right: 6px;
+        }
+
+        /* Stories Section */    .stories {
+        background: rgba(15, 23, 42, 0.6);
+        border: 1px solid rgba(148, 163, 184, 0.25);
+        border-radius: 16px;
+        padding: 16px;
+        margin-bottom: 24px;
+        display: flex;
+        gap: 16px;
+        overflow-x: auto;
+    }
+
+        .story {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            min-width: 70px;
+        }    .story-avatar {
+        width: 64px;
+        height: 64px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, #4f46e5, #22c55e);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #ffffff;
+        font-weight: bold;
+        font-size: 20px;
+        border: 3px solid #020617;
+        box-shadow: 0 0 0 2px rgba(79, 70, 229, 0.5);
+    }
+
+        .story-name {
+            font-size: 12px;
+            color: #ffffff;
+            text-align: center;
+            max-width: 70px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+
+        /* Responsive */
+        @media (max-width: 640px) {
+            .container {
+                margin: 0;
+                padding: 0;
+            }
+
+            .post {
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+
+            .stories {
+                border-radius: 0;
+                border-left: none;
+                border-right: none;
+            }
+        }
+    </style> -->
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div class="header-content">
+            <div class="logo">
+                <div class="logo-icon">W</div>
+                <span>Welgram</span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#" title="Home">🏠</a></li>
+                <li><a href="#" title="Explore">🔍</a></li>
+                <li><a href="#" title="Notifications">❤️</a></li>
+                <li><a href="#" title="Profile">👤</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Stories -->
+        <div class="stories">
+            <div class="story">
+                <div class="story-avatar">SM</div>
+                <div class="story-name">StockMaster</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">TP</div>
+                <div class="story-name">TradePro</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">FX</div>
+                <div class="story-name">ForexKing</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">CA</div>
+                <div class="story-name">CryptoAce</div>
+            </div>
+            <div class="story">
+                <div class="story-avatar">DT</div>
+                <div class="story-name">DayTrader</div>
+            </div>
+        </div>
+
+        <!-- Post 1 - Bullish Trade -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar">JD</div>
+                <div class="post-info">
+                    <div class="username">@johntrader</div>
+                    <div class="timestamp">2 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p class="post-text">Just entered a long position on AAPL! Strong bullish momentum with great fundamentals. Let's see this rally continue! 🚀📈</p>
+                <div class="trade-card bullish">
+                    <div class="trade-symbol">$AAPL</div>
+                    <div class="trade-price">$189.45</div>
+                    <div class="trade-change">+2.35%</div>
+                    <div class="trade-details">
+                        Entry: $187.20<br>
+                        Target: $195.00<br>
+                        Stop Loss: $185.50
+                    </div>
+                </div>
+                <div class="hashtags">
+                    <a href="#">#stocks</a>
+                    <a href="#">#trading</a>
+                    <a href="#">#bullish</a>
+                    <a href="#">#AAPL</a>
+                </div>
+            </div>
+            <div class="post-stats">2,847 likes</div>
+            <div class="post-actions">
+                <button class="action-btn" title="Like">❤️</button>
+                <button class="action-btn" title="Comment">💬</button>
+                <button class="action-btn" title="Share">📤</button>
+                <button class="action-btn" title="Save">🔖</button>
+            </div>
+        </div>
+
+        <!-- Post 2 - Market Analysis -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar">SA</div>
+                <div class="post-info">
+                    <div class="username">@sarahanalyst</div>
+                    <div class="timestamp">4 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p class="post-text">Bitcoin breaking through key resistance at $38K! Volume is strong and RSI looking healthy. This could be the start of a major rally 🔥</p>
+                <div class="trade-card">
+                    <div class="trade-symbol">BTC/USD</div>
+                    <div class="trade-price">$38,245</div>
+                    <div class="trade-change">+5.82%</div>
+                    <div class="trade-details">
+                        24h High: $38,450<br>
+                        24h Low: $35,980<br>
+                        Volume: $42.3B
+                    </div>
+                </div>
+                <div class="hashtags">
+                    <a href="#">#bitcoin</a>
+                    <a href="#">#crypto</a>
+                    <a href="#">#breakout</a>
+                    <a href="#">#technicalanalysis</a>
+                </div>
+            </div>
+            <div class="post-stats">5,234 likes</div>
+            <div class="post-actions">
+                <button class="action-btn" title="Like">❤️</button>
+                <button class="action-btn" title="Comment">💬</button>
+                <button class="action-btn" title="Share">📤</button>
+                <button class="action-btn" title="Save">🔖</button>
+            </div>
+        </div>
+
+        <!-- Post 3 - Bearish Warning -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar">MK</div>
+                <div class="post-info">
+                    <div class="username">@mikethebear</div>
+                    <div class="timestamp">6 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p class="post-text">Bearish divergence forming on TSLA. Double top pattern clearly visible on the 4H chart. Time to take profits and wait for confirmation! ⚠️📉</p>
+                <div class="trade-card bearish">
+                    <div class="trade-symbol">$TSLA</div>
+                    <div class="trade-price">$242.18</div>
+                    <div class="trade-change">-1.85%</div>
+                    <div class="trade-details">
+                        Resistance: $248.00<br>
+                        Support: $235.00<br>
+                        Position: SHORT from $245
+                    </div>
+                </div>
+                <div class="hashtags">
+                    <a href="#">#tesla</a>
+                    <a href="#">#bearish</a>
+                    <a href="#">#shortsetup</a>
+                    <a href="#">#technicals</a>
+                </div>
+            </div>
+            <div class="post-stats">1,892 likes</div>
+            <div class="post-actions">
+                <button class="action-btn" title="Like">❤️</button>
+                <button class="action-btn" title="Comment">💬</button>
+                <button class="action-btn" title="Share">📤</button>
+                <button class="action-btn" title="Save">🔖</button>
+            </div>
+        </div>
+
+        <!-- Post 4 - Forex Trade -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar">EL</div>
+                <div class="post-info">
+                    <div class="username">@emmaforex</div>
+                    <div class="timestamp">8 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p class="post-text">EUR/USD showing strong bullish momentum after breaking the trendline. Fed data coming tomorrow - expecting continued strength! 💪💰</p>
+                <div class="trade-card bullish">
+                    <div class="trade-symbol">EUR/USD</div>
+                    <div class="trade-price">1.0945</div>
+                    <div class="trade-change">+0.68%</div>
+                    <div class="trade-details">
+                        Entry: 1.0920<br>
+                        Take Profit 1: 1.0980<br>
+                        Take Profit 2: 1.1020<br>
+                        Stop Loss: 1.0890
+                    </div>
+                </div>
+                <div class="hashtags">
+                    <a href="#">#forex</a>
+                    <a href="#">#eurusd</a>
+                    <a href="#">#currencytrading</a>
+                    <a href="#">#federalreserve</a>
+                </div>
+            </div>
+            <div class="post-stats">3,456 likes</div>
+            <div class="post-actions">
+                <button class="action-btn" title="Like">❤️</button>
+                <button class="action-btn" title="Comment">💬</button>
+                <button class="action-btn" title="Share">📤</button>
+                <button class="action-btn" title="Save">🔖</button>
+            </div>
+        </div>
+
+        <!-- Post 5 - Trading Tips -->
+        <div class="post">
+            <div class="post-header">
+                <div class="avatar">RW</div>
+                <div class="post-info">
+                    <div class="username">@ryanwisdom</div>
+                    <div class="timestamp">10 hours ago</div>
+                </div>
+            </div>
+            <div class="post-content">
+                <p class="post-text">Remember: Risk management is more important than profit! Never risk more than 2% of your account on a single trade. Protect your capital first! 🛡️💼</p>
+                <div class="hashtags">
+                    <a href="#">#tradingtips</a>
+                    <a href="#">#riskmanagement</a>
+                    <a href="#">#tradingwisdom</a>
+                    <a href="#">#stockmarket</a>
+                </div>
+            </div>
+            <div class="post-stats">7,621 likes</div>
+            <div class="post-actions">
+                <button class="action-btn" title="Like">❤️</button>
+                <button class="action-btn" title="Comment">💬</button>
+                <button class="action-btn" title="Share">📤</button>
+                <button class="action-btn" title="Save">🔖</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
