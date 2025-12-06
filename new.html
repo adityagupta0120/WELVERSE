@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Broker Dashboard UI Mockup</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      margin: 0;
+      background: #fafcff;
+      color: #2d2d2d;
+    }
+    .header {
+      background: #fff;
+      border-bottom: 1px solid #ececec;
+      display: flex;
+      align-items: center;
+      padding: 0 24px;
+      height: 56px;
+      justify-content: space-between;
+    }
+    .nav-section {
+      display: flex;
+      align-items: center;
+      gap: 36px;
+    }
+    .nav-ticker {color: #219150; font-weight: 500; font-size: 15px; margin-right: 20px;}
+    .nav-ticker.expiry {color: #ed9c3a;}
+    .tab-bar {display: flex; gap: 24px; margin-left: 32px; margin-top: 16px;}
+    .tab {
+      background: none; border: none; padding: 12px 24px; font-weight: 500; color: #8a8a8a;
+      border-bottom: 2px solid transparent; cursor: pointer; transition: color 0.2s, border-bottom 0.2s;
+    }
+    .tab.active {color: #6C47FF; border-bottom: 2px solid #6C47FF; background: #f6f4ff;}
+    .sidebar {
+      background: #f8f9fa; width: 240px; height: calc(100vh - 56px); border-right: 1px solid #ececec;
+      position: fixed; top: 56px; left: 0; padding: 0; overflow-y: auto;
+    }
+    .sidebar-list {
+      margin: 0; padding: 0; list-style: none; font-size: 15px;
+    }
+    .sidebar-list li {
+      padding: 18px 20px; border-bottom: 1px solid #ececec;
+      display: flex; align-items: center; justify-content: space-between;
+      cursor: pointer;
+    }
+    .sidebar-list li span {color: #21a06c;}
+    .sidebar-list li.negative span {color: #d54c3b;}
+    .sidebar-list li.active {
+      background: #e5e2fb;
+      font-weight: 600;
+      color: #6C47FF;
+    }
+    .main {
+      margin-left: 240px;
+      padding: 32px 24px;
+      min-height: calc(100vh - 56px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      background: #fff;
+      position: relative;
+    }
+    .main-content {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      flex-direction: column;
+    }
+    .main-empty {
+      text-align: center;
+      color: #aaa;
+      margin-top: 60px;
+      font-size: 22px;
+    }
+    .main-empty-icon {
+      width: 48px; height: 48px; margin-bottom: 18px; background: #f3efff;
+      border-radius: 24px; display: inline-block;
+    }
+    .main-img {
+
+
+      width: 100%;
+      border: 1px solid #ececec;
+      border-radius: 8px;
+      box-shadow: 0 3px 16px #ccc3;
+    }
+    .top-actions {position: absolute; top: 68px; left: 252px; display: flex; gap: 10px;}
+    .plus-btn, .filter-btn {
+      background: #6C47FF; color: #fff; border: none; border-radius: 4px;
+      padding: 6px 14px; font-size: 16px; cursor: pointer;
+    }
+    .plus-btn {background: #6C47FF;}
+    .filter-btn {background: #edeaff; color: #6C47FF; border: 1px solid #6C47FF;}
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="nav-section">
+      <span class="nav-ticker">NIFTY 26,192.15 +139.50 (+0.54%)</span>
+      <span class="nav-ticker expiry">SENSEX 85,632.68 +446.21 (+0.52%) EXPIRE</span>
+      <span class="nav-ticker">India VIX 12.14 -0.17 (-1.42%)</span>
+    </div>
+    <div>
+      <button class="tab">My List</button>
+      <button class="tab">Orders</button>
+      <button class="tab">Positions</button>
+      <button class="tab active">Holdings</button>
+      <button class="tab">More</button>
+      <button class="plus-btn" style="margin-left:20px;">Plus ▸</button>
+      <button class="plus-btn" style="margin-left:8px;">AG</button>
+    </div>
+  </div>
+
+  <div class="sidebar">
+    <ul class="sidebar-list">
+      <li class="active">RELIANCE <span>1,549.10</span></li>
+      <li class="negative">TCS <span>3,144.80</span></li>
+      <li>HDFCBANK <span>1,008.85</span></li>
+      <li class="negative">INFY <span>1,536.50</span></li>
+      <li class="negative">HINDUNILVR <span>2,428.40</span></li>
+      <li class="negative">ICICIBANK <span>1,383.00</span></li>
+      <li class="negative">KOTAKBANK <span>2,098.70</span></li>
+      <li class="negative">SBIN <span>981.55</span></li>
+      <li>BAJAJFINSV <span>2,095.60</span></li>
+      <li class="negative">BHARTIARTL <span>2,158.30</span></li>
+      <li class="negative">HCLTECH <span>1,645.40</span></li>
+      <li>ITC <span>405.45</span></li>
+      <li class="negative">ASIANPAINT <span>2,859.80</span></li>
+      <li>WIPRO <span>246.26</span></li>
+      <li>AXISBANK <span>1,285.20</span></li>
+    </ul>
+    <div style="padding:18px 20px;font-size:13px;background:#efebff;margin-top:8px;">
+      Track 200 symbols with Plus ▸
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="main-content">
+      <!-- Show RELIANCE Chart Screenshot -->
+      <img class="main-img" src="Screenshot 2025-11-20 at 16.11.06.png" alt="Reliance Chart Screenshot">
+    </div>
+  </div>
+</body>
+</html>

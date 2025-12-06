@@ -1,42 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Sell Stocks - Welverse</title>
-    <link rel="stylesheet" href="home.css" />
+  <meta charset="UTF-8">
+  <title>Stocks Dashboard - Reliance</title>
+  
 </head>
 <body>
-    <header>
-        <h1>Sell Stocks</h1>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="buy.html">Buy</a>
-            <a href="sell.html">Sell</a>
-            <a href="about.html">About</a>
-            <a href="support.html">Support</a>
-        </nav>
-    </header>
+  <div class="header">
+    <div class="nav-section">
+      <span class="nav-ticker">NIFTY 26,192.15 +139.50 (+0.54%)</span>
+      <span class="nav-ticker expiry">SENSEX 85,632.68 +446.21 (+0.52%) EXPIRE</span>
+      <span class="nav-ticker" style="color:#95a0b6; background:#171c29;">India VIX 12.14 -0.17 (-1.42%)</span>
+    </div>
+    <div>
+      <a class="tab" style="text-decoration: none;color: white;" href="mylist.html">My List</a>
 
-    <main>
-        <h2>Sell Your Stock</h2>
-        <form>
-            <label for="stock">Stock Name:</label><br />
-            <input type="text" id="stock" name="stock" required /><br /><br />
-
-            <label for="price">Price per Share (₹):</label><br />
-            <input type="number" id="price" name="price" required /><br /><br />
-
-            <label for="qty">Quantity:</label><br />
-            <input type="number" id="qty" name="qty" required /><br /><br />
-
-            <input type="submit" value="Submit" disabled />
-        </form>
-        <p><em>Note: This is a demo; form submission needs backend to function.</em></p>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Welverse Finance</p>
-    </footer>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="orders.html">Orders</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="position.html">Positions</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="holdings.html">Holdings</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="more.html">More</a></button>
+      <button class="tab special"><a style="text-decoration: none;color: white;" href="pricing.html">PositionsPlus ▸</a></button>
+      <button class="tab special" style="margin-left:7px;"><a style="text-decoration: none;color: white;" href="acccount.html">AG</a></button>
+    </div>
+  </div>
+  <div class="sidebar">
+    <ul class="sidebar-list">
+      <li><a class="positive active" href="reliance.html">RELIANCE <span>1,549.10</span></a></li>
+      <li><a class="negative" href="tcs.html">TCS <span>3,144.80</span></a></li>
+      <li><a class="positive" href="hdfcbank.html">HDFCBANK <span>1,008.85</span></a></li>
+      <li><a class="negative" href="infy.html">INFY <span>1,536.50</span></a></li>
+      <li><a class="negative" href="hindunilvr.html">HINDUNILVR <span>2,428.40</span></a></li>
+      <li><a class="negative" href="icicibank.html">ICICIBANK <span>1,383.00</span></a></li>
+      <li><a class="negative" href="kotakbank.html">KOTAKBANK <span>2,098.70</span></a></li>
+      <li><a class="negative" href="sbin.html">SBIN <span>981.55</span></a></li>
+      <li><a class="positive" href="bajajfinsv.html">BAJAJFINSV <span>2,095.60</span></a></li>
+      <li><a class="negative" href="bhartiartl.html">BHARTIARTL <span>2,158.30</span></a></li>
+      <li><a class="negative" href="hcltech.html">HCLTECH <span>1,645.40</span></a></li>
+      <li><a class="positive" href="itc.html">ITC <span>405.45</span></a></li>
+      <li><a class="negative" href="asianpaint.html">ASIANPAINT <span>2,859.80</span></a></li>
+      <li><a class="positive" href="wipro.html">WIPRO <span>246.26</span></a></li>
+      <li><a class="positive" href="axisbank.html">AXISBANK <span>1,285.20</span></a></li>
+    </ul>
+    <div style="padding:15px 18px;font-size:13px;background:#22243a;margin-top:8px;color:#6C47FF; border-radius:8px;">
+      Track 200 symbols with Plus ▸
+    </div>
+  </div>
+  <div class="main">
+    <div class="main-empty">
+      It's empty in here.<br>
+      <span>Keep an eye on Equity purchases you make that carry over to the next day.</span>
+    </div>
+  </div>
 </body>
 </html>
+1

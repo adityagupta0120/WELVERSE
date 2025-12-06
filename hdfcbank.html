@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Stocks Dashboard - Reliance</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #111827;
+      color: #e7eaf3;
+      margin: 0;
+    }
+    .header {
+      background: #161b22;
+      border-bottom: 1px solid #20242c;
+      display: flex;
+      align-items: center;
+      padding: 0 32px;
+      height: 64px;
+      justify-content: space-between;
+    }
+    .nav-section {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+    }
+    .nav-ticker {
+      color: #21a06c;
+      font-weight: 500;
+      font-size: 15px;
+      margin-right: 16px;
+      padding: 3px 12px;
+      background: #171c29;
+      border-radius: 12px;
+    }
+    .nav-ticker.expiry {
+      color: #ed9c3a;
+      background: #21252f;
+    }
+    .tab {
+      background: none;
+      border: none;
+      padding: 10px 20px;
+      font-weight: 500;
+      color: #95a0b6;
+      border-bottom: 2px solid transparent;
+      cursor: pointer;
+      border-radius: 10px 10px 0 0;
+      margin: 0 1px;
+      transition: color .2s, border-bottom .2s;
+    }
+    .tab.active {
+      color: #6C47FF;
+      border-bottom: 2px solid #6C47FF;
+      background: #282d3b;
+    }
+    .tab.special {
+      background: #6C47FF;
+      color: #fff;
+      margin-left: 16px;
+      border-radius: 9px;
+    }
+
+    .sidebar {
+      background: #161b22;
+      width: 220px;
+      height: calc(100vh - 64px);
+      border-right: 1px solid #20242c;
+      position: fixed;
+      top: 64px;
+      left: 0;
+      padding: 0;
+      overflow-y: auto;
+    }
+    .sidebar-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      font-size: 15px;
+    }
+    .sidebar-list a {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-decoration: none;
+      font-size: 15px;
+      color: #e7eaf3;
+      padding: 15px 16px;
+      transition: background .2s, color .2s;
+      border-radius: 8px;
+      margin-bottom: 4px;
+    }
+    .sidebar-list a:hover,
+    .sidebar-list a:focus {
+      background: #22243a;
+      color: #6C47FF;
+      font-weight: 600;
+      outline: none;
+    }
+    .sidebar-list .active {
+      background: #22243a;
+      color: #6C47FF;
+      font-weight: 600;
+    }
+    .sidebar-list .positive span {
+      color: #21a06c;
+      font-weight: 500;
+    }
+    .sidebar-list .negative span {
+      color: #d54c3b;
+      font-weight: 500;
+    }
+
+    .main {
+      margin-left: 220px;
+      padding: 48px 24px;
+      min-height: calc(100vh - 64px);
+      background: #111827;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+    }
+    .main-empty {
+      background: #161b22;
+      color: #95a0b6;
+      padding: 40px 32px;
+      border-radius: 14px;
+      box-shadow: 0 4px 18px #181a1f33;
+      text-align: center;
+      font-size: 18px;
+      margin-top: 80px;
+      width: 100%;
+      max-width: 480px;
+      border: 1px solid #20242c;
+    }
+    .main-empty span {
+      font-size: 16px;
+      color: #6C47FF;
+      display: block;
+      margin-top: 10px;
+    }
+    ::-webkit-scrollbar {
+      width: 7px;
+      background: #161b22;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #20242c;
+      border-radius: 7px;
+    }
+  </style>
+</head>
+<body>
+  <div class="header">
+    <div class="logo" style="display: flex; align-items: center; gap: 0.4rem; font-weight: 700; font-size: 1.2rem; letter-spacing: 0.03em;">
+    <div class="logo-icon" style="width: 26px; height: 26px; border-radius: 8px; background: linear-gradient(135deg, #2563eb, #22c55e); display: flex; align-items: center; justify-content: center; font-size: 0.9rem;">W</div>
+    <span>Welverse</span>
+</div>
+
+    <div class="nav-section">
+      <span class="nav-ticker">NIFTY 26,192.15 +139.50 (+0.54%)</span>
+      <span class="nav-ticker expiry">SENSEX 85,632.68 +446.21 (+0.52%) EXPIRE</span>
+      <span class="nav-ticker" style="color:#95a0b6; background:#171c29;">India VIX 12.14 -0.17 (-1.42%)</span>
+    </div>
+    <div>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="mylist.html">My List</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="orders.html">Orders</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="position.html.html">Positions</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="holdings.html">Holdings</a></button>
+      <button class="tab"><a style="text-decoration: none;color: white;" href="more.html">More</a></button>
+      <button class="tab special"><a style="text-decoration: none;color: white;" href="pricing.html">PositionsPlus ▸</a></button>
+      <button class="tab special" style="margin-left:7px;"><a style="text-decoration: none;color: white;" href="acccount.html">AG</a></button>
+    </div>
+  </div>
+  <div class="sidebar">
+    <ul class="sidebar-list">
+      <li><a class="positive active" href="reliance.html">RELIANCE <span>1,549.10</span></a></li>
+      <li><a class="negative" href="tcs.html">TCS <span>3,144.80</span></a></li>
+      <li><a class="positive" href="hdfcbank.html">HDFCBANK <span>1,008.85</span></a></li>
+      <li><a class="negative" href="infy.html">INFY <span>1,536.50</span></a></li>
+      <li><a class="negative" href="hindunilvr.html">HINDUNILVR <span>2,428.40</span></a></li>
+      <li><a class="negative" href="icicibank.html">ICICIBANK <span>1,383.00</span></a></li>
+      <li><a class="negative" href="kotakbank.html">KOTAKBANK <span>2,098.70</span></a></li>
+      <li><a class="negative" href="sbin.html">SBIN <span>981.55</span></a></li>
+      <li><a class="positive" href="bajajfinsv.html">BAJAJFINSV <span>2,095.60</span></a></li>
+      <li><a class="negative" href="bhartiartl.html">BHARTIARTL <span>2,158.30</span></a></li>
+      <li><a class="negative" href="hcltech.html">HCLTECH <span>1,645.40</span></a></li>
+      <li><a class="positive" href="itc.html">ITC <span>405.45</span></a></li>
+      <li><a class="negative" href="asianpaint.html">ASIANPAINT <span>2,859.80</span></a></li>
+      <li><a class="positive" href="wipro.html">WIPRO <span>246.26</span></a></li>
+      <li><a class="positive" href="axisbank.html">AXISBANK <span>1,285.20</span></a></li>
+    </ul>
+    <div style="padding:15px 18px;font-size:13px;background:#22243a;margin-top:8px;color:#6C47FF; border-radius:8px;">
+      Track 200 symbols with Plus ▸
+    </div>
+  </div>
+  <div class="main-content">
+      <!-- Replace src with your screenshot for Reliance -->
+      <img style="margin-left: 250px;" height="900px" width="1500px" class="main-img" src="graphs photos/hdfc.png" alt="Reliance Chart Screenshot">
+    </div>
+</body>
+</html>
